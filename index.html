@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Собери свою историю — курс Елены Даниловой</title>
+  <style>
+    :root {
+      --bg:#1f245c;
+      --bg-2:#262d70;
+      --surface:#e8dbc5;
+      --ink:#1d1d1f;
+      --text:#f7f2ea;
+      --muted:#cfd2f7;
+      --accent:#f2a62b;
+      --accent-2:#ffcd73;
+      --radius:18px;
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg,var(--bg) 0%, var(--bg-2) 100%);
+      color:var(--text);
+      line-height:1.35;
+      text-wrap:pretty;
+    }
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:20px 16px 80px}
+    .section{padding:28px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+    .section:last-child{border-bottom:0}
+
+    .eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-2);font-weight:700}
+    h1{font-size:clamp(38px,10vw,84px);line-height:.95;margin:10px 0 12px;font-weight:800}
+    h2{font-size:clamp(30px,7vw,50px);line-height:1.02;margin:0 0 14px;font-weight:780}
+    h3{font-size:clamp(22px,5.2vw,34px);line-height:1.08;margin:0 0 10px}
+    p{font-size:clamp(18px,4.7vw,24px);margin:0 0 12px;color:var(--text)}
+    .meta{font-size:clamp(16px,4vw,20px);color:var(--muted)}
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:16px;
+      align-items:end;
+    }
+
+    .panel{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:var(--radius);
+      padding:16px;
+      backdrop-filter: blur(4px);
+    }
+
+    .warm{
+      background:var(--surface);
+      color:var(--ink);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .warm p,.warm li,.warm .meta{color:var(--ink)}
+
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:52px;padding:12px 18px;border-radius:999px;
+      font-size:18px;font-weight:700;text-decoration:none;cursor:pointer;
+      transition:.2s transform,.2s opacity;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+    .btn-primary{background:var(--accent);color:#201300}
+    .btn-secondary{background:transparent;border:1.5px solid rgba(255,255,255,.5);color:var(--text)}
+
+    ul{margin:0;padding-left:18px}
+    li{font-size:clamp(18px,4.7vw,24px);margin:0 0 10px}
+
+    .days{display:grid;gap:10px}
+    .day{
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:14px;
+      padding:12px;
+      background:rgba(255,255,255,.04);
+    }
+    .day strong{display:block;font-size:20px;margin-bottom:6px;color:var(--accent-2)}
+    .small{font-size:16px;color:var(--muted)}
+
+    .quote{
+      font-size:clamp(24px,6vw,42px);
+      line-height:1.1;
+      font-weight:760;
+      margin:0;
+    }
+
+    .faq details{
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:12px;
+      padding:12px 14px;
+      margin:0 0 10px;
+      background:rgba(255,255,255,.03);
+    }
+    .faq summary{cursor:pointer;font-size:20px;font-weight:650}
+    .faq p{font-size:18px;color:var(--muted);margin-top:8px}
+
+    .final{
+      text-align:center;
+      background:rgba(242,166,43,.12);
+      border:1px solid rgba(242,166,43,.6);
+      border-radius:20px;
+      padding:24px 16px;
+    }
+
+    @media (min-width:860px){
+      .wrap{padding:38px 30px 100px}
+      .hero-grid{grid-template-columns:1.1fr .9fr;gap:20px}
+      .section{padding:40px 0}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{transition:none!important;animation:none!important}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="section hero-grid">
+      <div>
+        <div class="eyebrow">Авторский мини-курс Елены Даниловой</div>
+        <h1>Собери<br>свою историю</h1>
+        <p>Семь дней мягкого пути к своей книге, голосу и пониманию себя. Без давления, без «правильно», с опорой на твой живой опыт.</p>
+        <p class="meta">Старт: 2 июня · 7 дней · 2 500 ₽</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://vk.me/danilovaelal" target="_blank" rel="noopener">Оплатить и записаться</a>
+          <a class="btn btn-secondary" href="#program">Смотреть программу</a>
+        </div>
+      </div>
+      <aside class="panel">
+        <p class="quote">«У тебя уже есть история. Не потому что ты особенная. А потому что ты живая.»</p>
+      </aside>
+    </section>
+
+    <section class="section warm">
+      <h2>Для кого курс</h2>
+      <ul>
+        <li>Для женщин, которые чувствуют, что прожили не «просто жизнь».</li>
+        <li>Для тех, у кого много опыта и боли, но пока мало слов.</li>
+        <li>Для тех, кто хочет писать, но не знает, с чего начать.</li>
+        <li>Для тех, кто устал от роли «надо» и хочет вернуть свой голос.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Что ты получишь за 7 дней</h2>
+      <ul>
+        <li>Увидишь главные темы своей жизни.</li>
+        <li>Найдёшь красную нить своей истории.</li>
+        <li>Соберёшь материал для книги, блога или личных текстов.</li>
+        <li>Поймёшь, о чём на самом деле хочешь говорить.</li>
+        <li>Перестанешь думать «у меня нет истории».</li>
+        <li>Получишь разрешение звучать своим голосом.</li>
+      </ul>
+    </section>
+
+    <section class="section warm" id="program">
+      <h2>Программа 7 дней</h2>
+      <div class="days">
+        <article class="day"><strong>День 0</strong><span class="small">«Ты уже здесь». Мягкий вход и выдох.</span></article>
+        <article class="day"><strong>День 1 — Где я потеряла себя</strong><span class="small">Первый эпизод, где ты отвернулась от себя.</span></article>
+        <article class="day"><strong>День 2 — Что меня сформировало</strong><span class="small">Карта 10 событий, после которых ты стала другой.</span></article>
+        <article class="day"><strong>День 3 — Моя скрытая тема</strong><span class="small">Повторяющийся мотив, который проходит через всю жизнь.</span></article>
+        <article class="day"><strong>День 4 — Голос, которым я хочу говорить</strong><span class="small">Снять страх «писать неправильно».</span></article>
+        <article class="day"><strong>День 5 — Красная нить истории</strong><span class="small">Собрать хаос в ясную структуру.</span></article>
+        <article class="day"><strong>День 6 — Для кого моя история</strong><span class="small">Понять, кому твоё личное может быть опорой.</span></article>
+        <article class="day"><strong>День 7 — Моя история не закончилась</strong><span class="small">Открыть следующую главу, а не «закрыть курс».</span></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Как проходит каждый день</h2>
+      <ul>
+        <li>Короткий живой текст урока (300–500 слов)</li>
+        <li>Аудио 5–10 минут голосом автора</li>
+        <li>3–4 вопроса для размышления</li>
+        <li>Небольшая письменная практика</li>
+        <li>Поддержка в общем чате</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://vk.me/danilovaelal" target="_blank" rel="noopener">Записаться на поток</a>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Если я пропущу день?</summary>
+        <p>Ничего не сломается. Курс можно проходить в своём темпе.</p>
+      </details>
+      <details>
+        <summary>Если я никогда не писала?</summary>
+        <p>Подойдёт. Это не курс по «правильному писательству», а путь к твоему голосу.</p>
+      </details>
+      <details>
+        <summary>Нужно ли делиться текстами в чате?</summary>
+        <p>Нет. Можно делиться, можно молчать — оба варианта нормальны.</p>
+      </details>
+    </section>
+
+    <section class="section final">
+      <h3>Твоя история уже есть.<br>Пора собрать её в живой, сильный, настоящий текст.</h3>
+      <div class="cta-row" style="justify-content:center;">
+        <a class="btn btn-primary" href="https://vk.me/danilovaelal" target="_blank" rel="noopener">Оплатить и записаться</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
